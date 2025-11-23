@@ -1,4 +1,7 @@
+let tries = 3; //adding how many times the user can play 23.11
+
 function play() {
+    if (tries>0){ //23.11
     //declare vars
     var player = document.getElementById("playerChoice").value; //from the user , string 
 
@@ -32,4 +35,11 @@ function play() {
             "You WON! Scissors cut paper" :
             "You LOST! Rock breaks scissors.";
     }
+
+    tries--; //decreasing 1
 }
+if (tries === 0) {
+        document.getElementById("winner").innerHTML += "<br><b>GAME OVER</b>";
+    }
+}
+
